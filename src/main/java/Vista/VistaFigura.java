@@ -26,21 +26,317 @@ public class VistaFigura extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel3 = new javax.swing.JLabel();
+        jTextFieldx1 = new javax.swing.JTextField();
+        jTextFieldy1 = new javax.swing.JTextField();
+        jTextFieldy2 = new javax.swing.JTextField();
+        jTextFieldx2 = new javax.swing.JTextField();
+        btnCrear = new javax.swing.JButton();
+        btnArea = new javax.swing.JButton();
+        btnVerificar = new javax.swing.JButton();
+        x1 = new javax.swing.JLabel();
+        y1 = new javax.swing.JLabel();
+        x2 = new javax.swing.JLabel();
+        y2 = new javax.swing.JLabel();
+        PuntoX = new javax.swing.JLabel();
+        PuntoY = new javax.swing.JLabel();
+        jTextFieldX = new javax.swing.JTextField();
+        jTextFieldY = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea = new javax.swing.JTextArea();
+        Escala = new javax.swing.JLabel();
+        btnEX = new javax.swing.JTextField();
+        Escalar = new javax.swing.JButton();
+        EscalaX = new javax.swing.JLabel();
+        btnE = new javax.swing.JTextField();
+        EscalaY = new javax.swing.JLabel();
+        btnEY = new javax.swing.JTextField();
+        Unidades = new javax.swing.JLabel();
+        btnU = new javax.swing.JTextField();
+        btnMH = new javax.swing.JButton();
+        btnMV = new javax.swing.JButton();
+        EscalaXY = new javax.swing.JButton();
+
+        jLabel3.setText("y1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jTextFieldx2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldx2ActionPerformed(evt);
+            }
+        });
+
+        btnCrear.setText("Crear Rectangulo");
+        btnCrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearActionPerformed(evt);
+            }
+        });
+
+        btnArea.setText("Calcular area");
+
+        btnVerificar.setText("Verificar Punto");
+
+        x1.setText("x1");
+
+        y1.setText("y1");
+
+        x2.setText("x2");
+
+        y2.setText("y2");
+
+        PuntoX.setText("Punto X");
+
+        PuntoY.setText("Punto Y");
+
+        jTextFieldX.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldXActionPerformed(evt);
+            }
+        });
+
+        jTextFieldY.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldYActionPerformed(evt);
+            }
+        });
+
+        jTextArea.setColumns(20);
+        jTextArea.setRows(5);
+        jScrollPane1.setViewportView(jTextArea);
+
+        Escala.setText("Escala");
+
+        btnEX.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEXActionPerformed(evt);
+            }
+        });
+
+        Escalar.setText("Escalar");
+
+        EscalaX.setText("Escala X");
+
+        btnE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEActionPerformed(evt);
+            }
+        });
+
+        EscalaY.setText("Escala Y");
+
+        btnEY.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEYActionPerformed(evt);
+            }
+        });
+
+        Unidades.setText("Unidades");
+
+        btnU.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUActionPerformed(evt);
+            }
+        });
+
+        btnMH.setText("Mover Horizontal");
+        btnMH.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMHActionPerformed(evt);
+            }
+        });
+
+        btnMV.setText("Mover Vertical");
+        btnMV.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMVActionPerformed(evt);
+            }
+        });
+
+        EscalaXY.setText("Escalar (X - Y)");
+        EscalaXY.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EscalaXYActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(209, 209, 209)
+                        .addComponent(y1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldy1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(100, 100, 100)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnArea, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(92, 92, 92)
+                        .addComponent(btnVerificar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(x2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextFieldx2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(46, 46, 46)
+                        .addComponent(y2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextFieldy2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(35, 35, 35)
+                                .addComponent(x1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldx1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(EscalaX, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(btnEX, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(PuntoX)
+                                            .addComponent(Escala))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jTextFieldX, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(btnE, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(161, 161, 161)
+                                .addComponent(PuntoY, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextFieldY, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(EscalaY, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Escalar))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnEY, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(EscalaXY))
+                                .addGap(41, 41, 41)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Unidades)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btnU, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(btnMH)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                                        .addComponent(btnMV))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 677, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(42, 42, 42))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextFieldx1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldy1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldy2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldx2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(x1)
+                    .addComponent(y1)
+                    .addComponent(x2)
+                    .addComponent(y2))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCrear)
+                    .addComponent(btnArea)
+                    .addComponent(btnVerificar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PuntoX)
+                    .addComponent(PuntoY)
+                    .addComponent(jTextFieldX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Escala)
+                    .addComponent(Escalar)
+                    .addComponent(btnE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Unidades)
+                    .addComponent(btnU, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(EscalaXY))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(EscalaX)
+                    .addComponent(btnEX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(EscalaY)
+                    .addComponent(btnEY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMH)
+                    .addComponent(btnMV))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCrearActionPerformed
+
+    private void jTextFieldXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldXActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldXActionPerformed
+
+    private void jTextFieldYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldYActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldYActionPerformed
+
+    private void jTextFieldx2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldx2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldx2ActionPerformed
+
+    private void btnEXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEXActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEXActionPerformed
+
+    private void btnEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEActionPerformed
+
+    private void btnEYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEYActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEYActionPerformed
+
+    private void btnUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUActionPerformed
+
+    private void btnMHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMHActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMHActionPerformed
+
+    private void btnMVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMVActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMVActionPerformed
+
+    private void EscalaXYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EscalaXYActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EscalaXYActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +374,35 @@ public class VistaFigura extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Escala;
+    private javax.swing.JLabel EscalaX;
+    private javax.swing.JButton EscalaXY;
+    private javax.swing.JLabel EscalaY;
+    private javax.swing.JButton Escalar;
+    private javax.swing.JLabel PuntoX;
+    private javax.swing.JLabel PuntoY;
+    private javax.swing.JLabel Unidades;
+    private javax.swing.JButton btnArea;
+    private javax.swing.JButton btnCrear;
+    private javax.swing.JTextField btnE;
+    private javax.swing.JTextField btnEX;
+    private javax.swing.JTextField btnEY;
+    private javax.swing.JButton btnMH;
+    private javax.swing.JButton btnMV;
+    private javax.swing.JTextField btnU;
+    private javax.swing.JButton btnVerificar;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea;
+    private javax.swing.JTextField jTextFieldX;
+    private javax.swing.JTextField jTextFieldY;
+    private javax.swing.JTextField jTextFieldx1;
+    private javax.swing.JTextField jTextFieldx2;
+    private javax.swing.JTextField jTextFieldy1;
+    private javax.swing.JTextField jTextFieldy2;
+    private javax.swing.JLabel x1;
+    private javax.swing.JLabel x2;
+    private javax.swing.JLabel y1;
+    private javax.swing.JLabel y2;
     // End of variables declaration//GEN-END:variables
 }

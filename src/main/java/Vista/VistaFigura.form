@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="y1"/>
+      </Properties>
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -23,13 +30,320 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="209" max="-2" attributes="0"/>
+                      <Component id="y1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jTextFieldy1" min="-2" pref="104" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnCrear" min="-2" pref="130" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="btnArea" min="-2" pref="130" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                      <Component id="btnVerificar" min="-2" pref="130" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="x2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jTextFieldx2" min="-2" pref="104" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                      <Component id="y2" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jTextFieldy2" min="-2" pref="104" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                              <Component id="x1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTextFieldx1" min="-2" pref="104" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="EscalaX" min="-2" pref="47" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="btnEX" min="-2" pref="105" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="PuntoX" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Escala" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jTextFieldX" min="-2" pref="105" max="-2" attributes="0"/>
+                                          <Component id="btnE" min="-2" pref="105" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="161" max="-2" attributes="0"/>
+                              <Component id="PuntoY" min="-2" pref="46" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jTextFieldY" min="-2" pref="105" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="EscalaY" min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Component id="Escalar" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="btnEY" min="-2" pref="105" max="-2" attributes="0"/>
+                                  <Component id="EscalaXY" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="Unidades" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="btnU" min="-2" pref="105" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="btnMH" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace pref="29" max="32767" attributes="0"/>
+                                      <Component id="btnMV" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" min="-2" pref="677" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jTextFieldx1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldy1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldy2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldx2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="x1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="y1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="x2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="y2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnCrear" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnArea" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnVerificar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="PuntoX" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="PuntoY" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldX" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextFieldY" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="Escala" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Escalar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnE" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="Unidades" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnU" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="EscalaXY" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="EscalaX" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnEX" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="EscalaY" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnEY" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnMH" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnMV" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Component id="jScrollPane1" pref="227" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JTextField" name="jTextFieldx1">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldy1">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldy2">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldx2">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldx2ActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnCrear">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Crear Rectangulo"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCrearActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnArea">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calcular area"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnVerificar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Verificar Punto"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="x1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="x1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="y1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="y1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="x2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="x2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="y2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="y2"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="PuntoX">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Punto X"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="PuntoY">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Punto Y"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldX">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldXActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTextFieldY">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldYActionPerformed"/>
+      </Events>
+    </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="jTextArea">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="Escala">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Escala"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="btnEX">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEXActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="Escalar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Escalar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="EscalaX">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Escala X"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="btnE">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="EscalaY">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Escala Y"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="btnEY">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEYActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="Unidades">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Unidades"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="btnU">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnMH">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mover Horizontal"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMHActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnMV">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Mover Vertical"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMVActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="EscalaXY">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Escalar (X - Y)"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EscalaXYActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
 </Form>
