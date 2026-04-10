@@ -1,15 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package Vista;
 
 /**
  *
  * @author rosam
  */
-public class VistaFigura extends javax.swing.JFrame {
 
+import Controlador.ControladorRectangulo;
+public class VistaFigura extends javax.swing.JFrame {
+    
+    private ControladorRectangulo controlador = new ControladorRectangulo();
+    
     /**
      * Creates new form VistaFigura
      */
@@ -75,8 +76,18 @@ public class VistaFigura extends javax.swing.JFrame {
         });
 
         btnArea.setText("Calcular area");
+        btnArea.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAreaActionPerformed(evt);
+            }
+        });
 
         btnVerificar.setText("Verificar Punto");
+        btnVerificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerificarActionPerformed(evt);
+            }
+        });
 
         x1.setText("x1");
 
@@ -295,11 +306,18 @@ public class VistaFigura extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
-        // TODO add your handling code here:
+    try {
+    int x = Integer.parseInt(jTextFieldX.getText());
+    int y = Integer.parseInt(jTextFieldY.getText());
+
+    jTextArea.setText(controlador.verificar(x, y));
+} catch (Exception e) {
+    jTextArea.setText("Error en el punto");
+}
     }//GEN-LAST:event_btnCrearActionPerformed
 
     private void jTextFieldXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldXActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_jTextFieldXActionPerformed
 
     private void jTextFieldYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldYActionPerformed
@@ -315,7 +333,12 @@ public class VistaFigura extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEXActionPerformed
 
     private void btnEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEActionPerformed
-        // TODO add your handling code here:
+    try {
+    int factor = Integer.parseInt(btnE.getText());
+    jTextArea.setText(controlador.escalar(factor));
+} catch (Exception e) {
+    jTextArea.setText("Error en escala");
+}
     }//GEN-LAST:event_btnEActionPerformed
 
     private void btnEYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEYActionPerformed
@@ -327,16 +350,52 @@ public class VistaFigura extends javax.swing.JFrame {
     }//GEN-LAST:event_btnUActionPerformed
 
     private void btnMHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMHActionPerformed
-        // TODO add your handling code here:
+        try {
+    int u = Integer.parseInt(btnU.getText());
+    jTextArea.setText(controlador.mover(u, true));
+} catch (Exception e) {
+    jTextArea.setText("Error en movimiento");
+}
     }//GEN-LAST:event_btnMHActionPerformed
 
     private void btnMVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMVActionPerformed
-        // TODO add your handling code here:
+        try {
+    int u = Integer.parseInt(btnU.getText());
+    jTextArea.setText(controlador.mover(u, false));
+} catch (Exception e) {
+    jTextArea.setText("Error en movimiento");
+}
     }//GEN-LAST:event_btnMVActionPerformed
 
     private void EscalaXYActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EscalaXYActionPerformed
-        // TODO add your handling code here:
+        try {
+    int fx = Integer.parseInt(btnEX.getText());
+    int fy = Integer.parseInt(btnEY.getText());
+
+    jTextArea.setText(controlador.escalar(fx, fy));
+} catch (Exception e) {
+    jTextArea.setText("Error en escala X-Y");
+}
     }//GEN-LAST:event_EscalaXYActionPerformed
+
+    private void btnAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAreaActionPerformed
+    try {
+    jTextArea.setText(controlador.mostrarArea());
+} catch (Exception e) {
+    jTextArea.setText("Debe crear el rectangulo primero");
+}
+    }//GEN-LAST:event_btnAreaActionPerformed
+
+    private void btnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarActionPerformed
+    try {
+        int x = Integer.parseInt(jTextFieldX.getText());
+        int y = Integer.parseInt(jTextFieldY.getText());
+
+    jTextArea.setText(controlador.verificar(x, y));
+} catch (Exception e) {
+    jTextArea.setText("Error en el punto");
+}
+    }//GEN-LAST:event_btnVerificarActionPerformed
 
     /**
      * @param args the command line arguments

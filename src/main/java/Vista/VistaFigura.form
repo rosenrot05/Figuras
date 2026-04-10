@@ -215,11 +215,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Calcular area"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAreaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnVerificar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Verificar Punto"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnVerificarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="x1">
       <Properties>
