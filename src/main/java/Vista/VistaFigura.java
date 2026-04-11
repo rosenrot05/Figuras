@@ -7,16 +7,23 @@ package Vista;
  */
 
 import Controlador.ControladorRectangulo;
+import Modelo.Rectangulo;
+import Vista.PanelDibujo;
+
 public class VistaFigura extends javax.swing.JFrame {
     
+    private PanelDibujo panel;
     private ControladorRectangulo controlador = new ControladorRectangulo();
     
     /**
      * Creates new form VistaFigura
      */
     public VistaFigura() {
-        initComponents();
-    }
+    initComponents();
+
+    panel = new PanelDibujo();
+    jScrollPane1.setViewportView(panel);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -57,6 +64,7 @@ public class VistaFigura extends javax.swing.JFrame {
         btnMH = new javax.swing.JButton();
         btnMV = new javax.swing.JButton();
         EscalaXY = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JToggleButton();
 
         jLabel3.setText("y1");
 
@@ -126,6 +134,11 @@ public class VistaFigura extends javax.swing.JFrame {
         });
 
         Escalar.setText("Escalar");
+        Escalar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EscalarActionPerformed(evt);
+            }
+        });
 
         EscalaX.setText("Escala X");
 
@@ -172,6 +185,13 @@ public class VistaFigura extends javax.swing.JFrame {
             }
         });
 
+        btnLimpiar.setText("Limpiar");
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -188,11 +208,6 @@ public class VistaFigura extends javax.swing.JFrame {
                         .addComponent(btnCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(100, 100, 100)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnArea, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(92, 92, 92)
-                        .addComponent(btnVerificar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(x2)
                         .addGap(18, 18, 18)
@@ -201,7 +216,12 @@ public class VistaFigura extends javax.swing.JFrame {
                         .addComponent(y2)
                         .addGap(18, 18, 18)
                         .addComponent(jTextFieldy2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42))))
+                        .addGap(42, 42, 42))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnArea, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(92, 92, 92)
+                        .addComponent(btnVerificar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
@@ -228,12 +248,6 @@ public class VistaFigura extends javax.swing.JFrame {
                                             .addComponent(btnE, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(161, 161, 161)
-                                .addComponent(PuntoY, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jTextFieldY, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(EscalaY, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -251,7 +265,15 @@ public class VistaFigura extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(btnMH)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
-                                        .addComponent(btnMV))))))
+                                        .addComponent(btnMV))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(161, 161, 161)
+                                .addComponent(PuntoY, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextFieldY, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnLimpiar)
+                                .addGap(53, 53, 53))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 677, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -280,8 +302,9 @@ public class VistaFigura extends javax.swing.JFrame {
                     .addComponent(PuntoX)
                     .addComponent(PuntoY)
                     .addComponent(jTextFieldX, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextFieldY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                    .addComponent(jTextFieldY, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Escala)
                     .addComponent(Escalar)
@@ -306,14 +329,24 @@ public class VistaFigura extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
+                                       
     try {
-    int x = Integer.parseInt(jTextFieldX.getText());
-    int y = Integer.parseInt(jTextFieldY.getText());
+        int x1Val = Integer.parseInt(jTextFieldx1.getText());
+        int y1Val = Integer.parseInt(jTextFieldy1.getText());
+        int x2Val = Integer.parseInt(jTextFieldx2.getText());
+        int y2Val = Integer.parseInt(jTextFieldy2.getText());
 
-    jTextArea.setText(controlador.verificar(x, y));
-} catch (Exception e) {
-    jTextArea.setText("Error en el punto");
-}
+        controlador.crearRectangulo(x1Val, y1Val, x2Val, y2Val);
+
+        Rectangulo r = (Rectangulo) controlador.getFigura();
+        panel.setRectangulo(r);
+        panel.repaint();
+
+        jTextArea.setText("Rectangulo creado correctamente");
+    } catch (Exception e) {
+        jTextArea.setText("Error al crear el rectangulo");
+    }
+
     }//GEN-LAST:event_btnCrearActionPerformed
 
     private void jTextFieldXActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldXActionPerformed
@@ -336,6 +369,9 @@ public class VistaFigura extends javax.swing.JFrame {
     try {
     int factor = Integer.parseInt(btnE.getText());
     jTextArea.setText(controlador.escalar(factor));
+    
+    panel.setRectangulo((Rectangulo) controlador.getFigura());
+        panel.repaint();
 } catch (Exception e) {
     jTextArea.setText("Error en escala");
 }
@@ -353,6 +389,9 @@ public class VistaFigura extends javax.swing.JFrame {
         try {
     int u = Integer.parseInt(btnU.getText());
     jTextArea.setText(controlador.mover(u, true));
+    
+    panel.setRectangulo((Rectangulo) controlador.getFigura());
+        panel.repaint();
 } catch (Exception e) {
     jTextArea.setText("Error en movimiento");
 }
@@ -362,6 +401,9 @@ public class VistaFigura extends javax.swing.JFrame {
         try {
     int u = Integer.parseInt(btnU.getText());
     jTextArea.setText(controlador.mover(u, false));
+    
+    panel.setRectangulo((Rectangulo) controlador.getFigura());
+        panel.repaint();
 } catch (Exception e) {
     jTextArea.setText("Error en movimiento");
 }
@@ -373,6 +415,9 @@ public class VistaFigura extends javax.swing.JFrame {
     int fy = Integer.parseInt(btnEY.getText());
 
     jTextArea.setText(controlador.escalar(fx, fy));
+    
+    panel.setRectangulo((Rectangulo) controlador.getFigura());
+    panel.repaint();
 } catch (Exception e) {
     jTextArea.setText("Error en escala X-Y");
 }
@@ -380,10 +425,23 @@ public class VistaFigura extends javax.swing.JFrame {
 
     private void btnAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAreaActionPerformed
     try {
-    jTextArea.setText(controlador.mostrarArea());
-} catch (Exception e) {
-    jTextArea.setText("Debe crear el rectangulo primero");
-}
+        if (controlador.getFigura() == null) {
+            jTextArea.setText("Debe crear el rectangulo primero");
+            return;
+        }
+
+        String area = controlador.mostrarArea();
+        jTextArea.setText(area);
+
+        // 
+        panel.setRectangulo((Rectangulo) controlador.getFigura());
+        panel.repaint();
+
+    } catch (Exception e) {
+        e.printStackTrace();
+        jTextArea.setText("Error al calcular area");
+    }
+
     }//GEN-LAST:event_btnAreaActionPerformed
 
     private void btnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarActionPerformed
@@ -391,11 +449,41 @@ public class VistaFigura extends javax.swing.JFrame {
         int x = Integer.parseInt(jTextFieldX.getText());
         int y = Integer.parseInt(jTextFieldY.getText());
 
-    jTextArea.setText(controlador.verificar(x, y));
+  
+  jTextArea.setText(controlador.verificar(x, y));
 } catch (Exception e) {
     jTextArea.setText("Error en el punto");
 }
     }//GEN-LAST:event_btnVerificarActionPerformed
+
+    private void EscalarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EscalarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EscalarActionPerformed
+
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        // Limpiar campos
+    jTextFieldx1.setText("");
+    jTextFieldy1.setText("");
+    jTextFieldx2.setText("");
+    jTextFieldy2.setText("");
+    jTextFieldX.setText("");
+    jTextFieldY.setText("");
+    btnE.setText("");
+    btnEX.setText("");
+    btnEY.setText("");
+    btnU.setText("");
+
+    // Limpiar área de texto
+    jTextArea.setText("");
+
+    // Borrar rectángulo del controlador
+    controlador = new ControladorRectangulo();
+
+    // Limpiar dibujo
+    panel.setRectangulo(null);
+    panel.repaint();
+
+    }//GEN-LAST:event_btnLimpiarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -446,6 +534,7 @@ public class VistaFigura extends javax.swing.JFrame {
     private javax.swing.JTextField btnE;
     private javax.swing.JTextField btnEX;
     private javax.swing.JTextField btnEY;
+    private javax.swing.JToggleButton btnLimpiar;
     private javax.swing.JButton btnMH;
     private javax.swing.JButton btnMV;
     private javax.swing.JTextField btnU;
